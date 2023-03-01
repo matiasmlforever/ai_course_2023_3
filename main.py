@@ -1,5 +1,8 @@
 # This is a sample Python script.
+import datetime
+
 from model.Agente import Agente
+from model.Ambiente import Ambiente
 
 MAX_AGENTES = 2;
 
@@ -23,4 +26,8 @@ if __name__ == '__main__':
 
     print(agentes)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    ambiente = Ambiente(size=100, timestamp="22:32", agentes=agentes)
+    ambiente.agentes = agentes
+
+    print(ambiente)
+    # ENTONCES LOS AGENTES ESTAN CONTENIDOS EN AMBIENTE
